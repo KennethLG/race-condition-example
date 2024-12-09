@@ -1,0 +1,21 @@
+{
+  "name": "race-condition-redis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ioredis": "^5.4.1",
+    "redis": "^4.7.0",
+    "redlock": "^5.0.0-beta.2",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "@types/redlock": "^4.0.7"
+  }
+}

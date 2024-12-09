@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+    container_name: redis-app
+    depends_on:
+      - redis
+    ports:
+      - "3000:3000" # Map port 3000 (if needed for app debugging or expansion)
+    environment:
+      - REDIS_HOST=redis
+    command: ["npm", "start"]
+
+  redis:
+    image: redis
+    container_name: redis-race-condition
+    ports:
+      - "6380:6379" # Expose Redis port
